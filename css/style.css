@@ -65,6 +65,10 @@ footer {
     color: #ffd700;
 }
 
+footer i {
+    color:  #ffd700;
+}
+
 .welcome {
     align-self: flex-start;
 }
