@@ -1,25 +1,3 @@
-body, button, input, textarea, select {
-    font-family: Garamond, serif;
-
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: Garamond, serif;
-}
-
-#add {
-    background-color: #2B3A67;
-    color: #ffd700;
-    padding: 0.5rem;
-    box-shadow: 3px 1px 1px black;
-
-}
-
-#add:hover {
-    background-color: #ffd700;
-    color: #2B3A67;
-}
-
 /* Resets */
 * {
     margin: 0;
@@ -27,7 +5,16 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
 }
 
-/* Layout */
+/* Fonts */
+body, button, input, textarea, select {
+    font-family: Garamond, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Garamond, serif;
+}
+
+/* `nav` landmark */
 nav {
     height: 10vh;
     display: flex;
@@ -39,7 +26,7 @@ nav {
     color: #ffd700;
 }
 
-
+/* `main` landmark */
 main {
     height: 80vh;
     display: flex;
@@ -51,9 +38,7 @@ main {
     background-color: #F5EFE6;
 }
 
-
-
-
+/* `footer` landmark */
 footer {
     height: 10vh;
     display: flex;
@@ -75,7 +60,6 @@ footer i {
 
 
 /* Table Styling */
-
 table {
     align-self: stretch;
     border-collapse: collapse;
@@ -101,6 +85,20 @@ td {
     opacity: 0.8;
 }
 
+/* "Add Book" button */
+#add {
+    background-color: #2B3A67;
+    color: #ffd700;
+    padding: 0.5rem;
+    box-shadow: 3px 1px 1px black;
+
+}
+
+#add:hover {
+    background-color: #ffd700;
+    color: #2B3A67;
+}
+
 /* Dialog */
 
 /* Hide the dialog by default */
@@ -114,7 +112,7 @@ dialog {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000; /* Ensure the dialog is on top of other content */
+    z-index: 1000;
 }
 
 /* Style when dialog is open */
@@ -183,5 +181,3 @@ dialog input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-

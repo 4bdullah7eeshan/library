@@ -11,11 +11,9 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-
 Book.prototype.info = function() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 };
-
 
 function displayBooks() {
     /*
@@ -52,10 +50,10 @@ function displayBooks() {
         const emptyRow = document.createElement("tr");
         const emptyCell = document.createElement("td");
 
-        // Span all columns
-        emptyCell.colSpan = "5";  // Adjust colSpan based on the number of columns
+        emptyCell.colSpan = "5";
         emptyCell.classList.add("empty");
         emptyCell.textContent = "Currently there are no books in your library!";
+
         emptyRow.appendChild(emptyCell);
         table.appendChild(emptyRow);
     } else {
@@ -74,7 +72,6 @@ function displayBooks() {
             readStatusCell.textContent = myLibrary[i].read;
 
             const deleteBookButton = document.createElement("button")
-            //deleteBookButton.textContent = "Delete";
             deleteBookButton.innerHTML = '<i class="mdi mdi-delete"></i>'; // MDI delete icon
             deleteBookButton.addEventListener("click", () => {
                 myLibrary.pop(myLibrary[i]);
@@ -93,7 +90,6 @@ function displayBooks() {
         }
     }
 };
-
 
 const addNewBookButton = document.querySelector("#add");
 const dialog = document.querySelector("dialog");
@@ -131,8 +127,7 @@ headerRow.appendChild(manageHeader);
 const emptyRow = document.createElement("tr");
 const emptyCell = document.createElement("td");
 
-        // Span all columns
-emptyCell.colSpan = "5";  // Adjust colSpan based on the number of columns
+emptyCell.colSpan = "5";
 emptyCell.classList.add("empty");
 emptyCell.textContent = "Currently there are no books in your library!";
 emptyRow.appendChild(emptyCell);
@@ -140,9 +135,7 @@ emptyRow.appendChild(emptyCell);
 table.appendChild(headerRow);
 table.appendChild(emptyRow);
 
-
 // "Show the dialog" button opens the dialog modally
-
 addNewBookButton.addEventListener("click", () => {
   dialog.showModal();
 });
@@ -158,7 +151,4 @@ form.addEventListener("submit", (e) => {
     addBookToLibrary(book);
     displayBooks();
     dialog.close();
-
 });
-
-
