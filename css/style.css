@@ -1,3 +1,25 @@
+body, button, input, textarea, select {
+    font-family: Garamond, serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Garamond, serif;
+}
+
+#add {
+    background-color: #2B3A67;
+    color: #ffd700;
+    padding: 0.5rem;
+    box-shadow: 3px 1px 1px black;
+
+}
+
+#add:hover {
+    background-color: #ffd700;
+    color: #2B3A67;
+}
+
 /* Resets */
 * {
     margin: 0;
@@ -11,8 +33,12 @@ nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    outline: 1px solid black;
+    padding: 1rem;
+    outline: 1px solid #800000;
+    background-color: #1F294D;
+    color: #ffd700;
 }
+
 
 main {
     height: 80vh;
@@ -22,7 +48,11 @@ main {
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+    background-color: #F5EFE6;
 }
+
+
+
 
 footer {
     height: 10vh;
@@ -30,7 +60,13 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    outline: 1px solid black;
+    outline: 1px solid #800000;
+    background-color: #1F294D;
+    color: #ffd700;
+}
+
+.welcome {
+    align-self: flex-start;
 }
 
 
@@ -48,6 +84,8 @@ th, td {
 
 th {
     text-align: center;
+    background-color: #1F294D;
+    color: #ffd700;
 }
 
 td {
@@ -56,6 +94,90 @@ td {
 
 .empty {
     font-style: italic;
-    opacity: 0.6;
+    opacity: 0.8;
 }
+
+/* Dialog */
+
+/* Hide the dialog by default */
+dialog {
+    display: none;
+    border: solid 1px black;
+    padding: 1rem;
+    background: #F5EFE6;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure the dialog is on top of other content */
+}
+
+/* Style when dialog is open */
+dialog[open] {
+    display: block;
+}
+
+/* Dialog Backdrop */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+/* Dialog Buttons */
+dialog button {
+    border: none;
+    background: #205D3C;
+    color: #daa520;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+dialog .close-button {
+    background: #4C0000;
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+dialog .close-button:hover {
+    background-color: #800000;
+}
+
+dialog #sub {
+    background-color: #205D3C;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+dialog #sub:hover {
+    background-color: #2e8b57;
+}
+
+/* Dialog Form */
+dialog form {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog #sub {
+    align-self: flex-end;
+}
+
+dialog fieldset {
+    border: none;
+    margin: 10px 0;
+}
+
+dialog div {
+    margin-bottom: 10px;
+}
+
+dialog input[type="text"],
+dialog input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 

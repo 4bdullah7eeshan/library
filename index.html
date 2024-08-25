@@ -10,45 +10,52 @@
 </head>
 <body>
     <nav>
-        <a href="./index.html">
-            <h1>Library</h1>
-        </a>
+        <h1>Library</h1>
     </nav>
     <main>
+        <section class="welcome">
+            <header>
+                <h2>Welcome</h2>
+            </header>
+            <p>
+                
+            </p>
+        </section>
 
         <table>
 
         </table>
+
         <button id="add">Add Book</button>
 
         <dialog>
-            <button autofocus>Close</button>
-            <form action="post">
-                <h1>Add Book</h1>
+            <button autofocus class="close-button">Close</button>
+            <form action="#" method="get">
+                <h2>Add Book</h2>
                 <fieldset>
                     <legend>Book Details</legend>
 
                     <div>
-                        <label for="title">Title:</label>
-                        <input type="text" id="title" name="title" placeholder="Night Watch">
+                        <label for="title">*Title:</label>
+                        <input type="text" id="title" name="title" placeholder="Night Watch" required>
                     </div>
 
                     <div>
-                        <label for="author">Author:</label>
-                        <input type="text" id="author" name="author"placeholder="Jane Anne Phillips">
+                        <label for="author">*Author:</label>
+                        <input type="text" id="author" name="author"placeholder="Jane Anne Phillips" required>
                     </div>
 
                     <div>
-                        <label for="pages">Pages:</label>
-                        <input type="number" id="pages" name="pages" placeholder="299">
+                        <label for="pages">*Pages:</label>
+                        <input type="number" id="pages" name="pages" placeholder="299" required>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Reading Status</legend>
+                    <legend>*Did you read this book?</legend>
 
                     <div>
                         <label for="yes">Yes</label>
-                        <input type="radio" name="read" id="yes" value="yes">
+                        <input type="radio" name="read" id="yes" value="yes" required>
                     </div>
 
                     <div>
@@ -57,7 +64,7 @@
                     </div>
                 </fieldset>
                 <div>
-                    <button type="button" id="sub">Submit</button>
+                    <button type="submit" id="sub">Submit</button>
                 </div>
             </form>
         </dialog>
