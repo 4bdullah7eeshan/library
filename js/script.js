@@ -98,7 +98,7 @@ function displayBooks() {
 const addNewBookButton = document.querySelector("#add");
 const dialog = document.querySelector("dialog");
 const closeDialogButton = document.querySelector("dialog button");
-const submitButton = document.querySelector("#sub");
+const form = document.querySelector("form");
 
 const title = document.querySelector("#title");
 const author = document.querySelector("#author");
@@ -152,7 +152,8 @@ closeDialogButton.addEventListener("click", () => {
   dialog.close();
 });
 
-submitButton.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
     const book = new Book(title.value, author.value, pages.value, yes.checked ? "yes" : "no");
     addBookToLibrary(book);
     displayBooks();
