@@ -4,3 +4,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Layout */
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    outline: 1px solid black;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    outline: 1px solid black;
+}
+
+
+/* Table Styling */
+
+table {
+    align-self: stretch;
+    border-collapse: collapse;
+}
+
+th, td {
+    outline: 1px solid black;
+    padding: 0.5rem;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+.empty {
+    font-style: italic;
+    opacity: 0.6;
+}
+
